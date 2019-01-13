@@ -1,4 +1,12 @@
 package com.ul.fr.graphe;
+
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+
 class Test
 {
    static boolean visite[];
@@ -33,9 +41,21 @@ class Test
 		visite = new boolean[n*n+2];
 		dfs(g, 3);
 	 }
-   
+   public static void readpgm()
+   {
+   	System.out.println("/data"+File.separator+"ex2.pgm");
+   	try {
+
+		FileInputStream fileInputStream = new FileInputStream("/data/test.txt");
+	}catch (IOException ex)
+	{
+		ex.printStackTrace();
+	}
+
+   }
    public static void main(String[] args)
 	 {
-		testGraph();
+		//testGraph();
+		 readpgm();
 	 }
 }
